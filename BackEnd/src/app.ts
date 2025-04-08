@@ -1,5 +1,6 @@
 import Express,{Request,Response} from 'express';
-import healthRoutes from './routes/health.routes'; //RUTAS
+import userRoutes from './routes/user.routes';
+
 import morgan from "morgan";
 
 //!Instancia de app
@@ -11,6 +12,6 @@ app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
 
 //Rutas Desde health
-app.use('/health', healthRoutes);
+app.use('/users', userRoutes);
 
 export default app;
